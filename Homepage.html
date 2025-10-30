@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FortuneX - Homepage</title>
+  <meta name="title" content="fortuneX –  earning & rewarding platform">
+  <meta property="og:description" content="Join FortuneX and discover easy earning opportunities. Log in now or sign up and stsrt earning Legitimate, secure, and rewarding!">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #a51200, #ff4c00, #ffae00);
+      color: #fff;
+      overflow-x: hidden;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    .content {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    p {
+      color: #f3f3f3;
+      max-width: 600px;
+      margin: 0 auto 30px;
+      line-height: 1.6;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .btn-primary, .btn-secondary {
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 12px;
+      padding: 14px 32px;
+      width: 200px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #ffae00, #ff6b00);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #ffb733, #ff8100);
+      transform: scale(1.03);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: scale(1.03);
+    }
+
+    .chat-icon {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      background: #25D366;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 28px;
+      box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .chat-icon:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 25px rgba(37, 211, 102, 0.8);
+    }
+
+    .promo-image {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 204, 0, 0.3);
+      margin-bottom: 25px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .promo-image:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 35px rgba(255, 204, 0, 0.5);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    .card {
+      background: linear-gradient(135deg, #a51200, #ff4c00, #ffae00);
+      border-radius: 14px;
+      padding: 30px 25px;
+      max-width: 420px;
+      margin: 40px auto;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 0 25px rgba(255, 150, 0, 0.4);
+    }
+
+    .card h2 {
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+      border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+      padding-bottom: 8px;
+      color: #fff;
+    }
+
+    .card p {
+      margin-bottom: 25px;
+      font-weight: 400;
+      line-height: 1.5;
+      font-size: 1.05rem;
+      color: #fff;
+    }
+
+    .card-image {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(255, 200, 0, 0.3);
+    }
+
+    .flag {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.15);
+      padding: 5px 10px;
+      margin: 3px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    .btn-orange {
+      background: linear-gradient(135deg, #ffae00, #ff6b00);
+      color: white;
+      border-radius: 8px;
+      padding: 12px 15px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(255, 120, 0, 0.4);
+    }
+
+    .btn-orange:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(255, 150, 0, 0.6);
+    }
+
+    .btn-join {
+      background: linear-gradient(135deg, #fff, #ffd699);
+      color: #b84a00;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 14px 0;
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: box-shadow 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-join:hover {
+      box-shadow: 0 8px 15px rgba(255, 200, 100, 0.7);
+      transform: translateY(-3px);
+    }
+
+    .faq-section {
+      background: linear-gradient(135deg, #a51200, #ff4c00, #ffae00);
+      padding: 40px 20px;
+      max-width: 600px;
+      margin: 50px auto;
+      border-radius: 14px;
+      box-shadow: 0 0 25px rgba(255, 150, 0, 0.4);
+    }
+
+    .faq-section h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    .faq-item {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      margin-bottom: 15px;
+      overflow: hidden;
+      transition: 0.3s;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .faq-question {
+      padding: 15px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding: 0 15px;
+      color: #fff;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+      padding: 15px;
+    }
+
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(90deg);
+    }
+ .join-btn {
+  display: inline-block;
+  margin-top: 14px;
+  background: linear-gradient(135deg, #ffae00, #ff4c00, #a51200);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(255, 140, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.join-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(255, 170, 0, 0.7);
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 10px rgba(255, 160, 0, 0.5); }
+  50% { transform: scale(1.05); box-shadow: 0 0 20px rgba(255, 200, 0, 0.8); }
+}
+
+.join-btn {
+  animation: pulse 2.5s infinite;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <img src="fortunex2.jpg" alt="FortuneX" class="promo-image" id="promoImage" />
+  </div>
+
+  <div class="content">
+    <h1>Watch, Chat & Earn on FortuneX</h1>
+    <p>FORTUNEX provides the tools to learn valuable digital skills, grow your daily income, and unlock new opportunities across African and beyond</p>
+    <div class="buttons">
+      <a href="https://chat.whatsapp.com/DbqH4O8Qo691HT8nyFDchz?mode=wwt" class="btn-primary">Get Started</a> 
+    </div>
+  </div>
+  <div class="card">
+  <img src="fortunex1.jpg" alt="FortuneX Worldwide" class="card-image">
+  <h2>FORTUNEX IS UNIVERSAL </h2>
+  <p>
+    Whether you're from  
+    <span class="flag">🇬🇭 Ghana</span>,  
+    <span class="flag">🇳🇬 Nigeria</span>,  
+    <span class="flag">🇰🇪 Kenya</span>,  
+    <span class="flag">🇺🇬 Uganda</span>,  
+    <span class="flag">🇸🇱 Sierra Leone</span>,  
+    <span class="flag">🇨🇲 Cameroon</span>  
+    or anywhere beyond Africa — FortuneX welcomes you!  
+  </p>
+
+  <button class="btn-orange" onclick="window.location.href='https://chat.whatsapp.com/DbqH4O8Qo691HT8nyFDchz?mode=wwt'">
+    Connect Globally & Earn Instantly
+  </button>
+
+  <button class="btn-orange" onclick="window.location.href='https://chat.whatsapp.com/DbqH4O8Qo691HT8nyFDchz?mode=wwt'">
+    Engage, Learn & Build Real Wealth
+  </button>
+
+  <button class="btn-orange" onclick="https://chat.whatsapp.com/DbqH4O8Qo691HT8nyFDchz?mode=wwt">
+    Join a Vibrant, Rewarding Community
+  </button>
+
+  <button class="btn-join">JOIN NOW!!!</button>
+</div>
+
+<!-- FAQ Section -->
+<div class="faq-section">
+  <img src="fortunex.jpg" alt="FortuneX Support" class="faq-image" />
+
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <button class="faq-question">What is FortuneX?</button>
+    <div class="faq-answer">
+      <p>FortuneX is a digital earning community where users watch videos, engage, and earn rewards daily.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+  <button class="faq-question">How do I start earning?</button>
+  <div class="faq-answer">
+    <p>To start earning, simply join our community and follow the steps shared inside the group.</p>
+    <a href="https://chat.whatsapp.com/DbqH4O8Qo691HT8nyFDchz?mode=wwt" target="_blank" class="join-btn">
+     Join Our WhatsApp Group
+    </a>
+  </div>
+</div>
+
+
+  <div class="faq-item">
+    <button class="faq-question">Can I withdraw anytime?</button>
+    <div class="faq-answer">
+      <p>Yes! Once your balance reaches the minimum withdrawal threshold, you can cash out directly.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Do I need to refer people?</button>
+    <div class="faq-answer">
+      <p>No, you don't need to refer anyone to get paid on FortuneX.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question"> Is FortuneX available outside Africa?</button>
+    <div class="faq-answer">
+      <p>Yes! FortuneX is open to users worldwide and supports several countries beyond Africa.</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .faq-section {
+    background: linear-gradient(135deg, #a51200, #ff4c00, #ffae00);
+    color: #fff;
+    padding: 50px 20px;
+    border-radius: 20px;
+    margin: 50px auto;
+    max-width: 800px;
+    box-shadow: 0 0 25px rgba(255, 180, 0, 0.3);
+    text-align: center;
+  }
+
+  .faq-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    margin-bottom: 20px;
+  }
+
+  .faq-section h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+  }
+
+  .faq-item {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+
+  .faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 14px 20px;
+    background: transparent;
+    border: none;
+    font-size: 1.05rem;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq-question:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .faq-answer {
+    display: none;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.08);
+    text-align: left;
+  }
+
+  .faq-answer p {
+    margin: 0;
+    color: #fefefe;
+    font-size: 0.95rem;
+  }
+
+  .faq-item.active .faq-answer {
+    display: block;
+  }
+
+  .faq-item.active .faq-question::after {
+    content: "−";
+  }
+
+  .faq-question::after {
+    content: "+";
+    font-size: 1.2rem;
+    color: #fff;
+  }
+</style>
+
+<section id="why-section" class="why-section">
+  <div class="why-container">
+    <div class="why-image">
+      <img src="withdrawal.jpg" alt="image2" />
+    </div>
+
+    <div class="why-text">
+      <h2>WHY MEMBERS CHOOSE FORTUNEX</h2>
+      <p>
+        All our activities, creativity, and services are reviewed, verified, and fully certified.
+        You are free to explore and benefit from our trusted platform.
+      </p>
+    </div>
+  </div>
+
+  <div class="why-grid">
+    <div class="why-card">
+      <i class="fa-solid fa-lock"></i>
+      <h3>Protected & Secure</h3>
+      <p>Your earnings and data are protected with top-grade encryption and full verification.</p>
+    </div>
+
+    <div class="why-card">
+      <i class="fa-solid fa-wallet"></i>
+      <h3>Timely Payouts</h3>
+      <p>Withdraw anytime. No delays, no excuses — just results.</p>
+    </div>
+
+    <div class="why-card">
+      <i class="fa-solid fa-headset"></i>
+      <h3>Always Available Support</h3>
+      <p>Our team provides 24/7 assistance to guide you through every step.</p>
+    </div>
+
+    <div class="why-card">
+      <i class="fa-solid fa-coins"></i>
+      <h3>Multiple Income Channels</h3>
+      <p>Earn from several integrated earning systems on one seamless platform.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.why-section {
+  background: linear-gradient(135deg, #5a0000, #a32200, #ff6600);
+  color: #fff;
+  padding: 70px 20px;
+  overflow: hidden;
+}
+.why-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  max-width: 950px;
+  margin: auto;
+}
+.why-image img {
+  width: 320px;
+  border-radius: 18px;
+  box-shadow: 0 0 20px rgba(255, 100, 0, 0.6);
+  opacity: 0;
+  transform: scale(0.6) rotate(-180deg);
+  transition: all 1s ease;
+}
+.why-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.why-text h2 {
+  color: #ffd700;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.why-text p {
+  color: #fff0d9;
+  line-height: 1.6;
+}
+.why-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 500px) {
+  .why-card {
+    font-size: 0.9rem;
+    padding: 18px 10px;
+  }
+  .why-card h3 {
+    font-size: 1rem;
+  }
+  .why-card p {
+    font-size: 0.85rem;
+  }
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.why-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 150, 0, 0.2);
+  border-radius: 18px;
+  padding: 25px 15px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(255, 90, 0, 0.3);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.why-card i {
+  font-size: 2rem;
+  color: #ffae00;
+  margin-bottom: 12px;
+}
+
+.why-card h3 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.why-card p {
+  font-size: 0.9rem;
+  color: #ffe6cc;
+}
+.show-image img {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.show-card {
+  opacity: 1 !important;
+  transform: translateY(0px) !important;
+  animation: glow 1.2s ease;
+}
+@keyframes glow {
+  0% { box-shadow: 0 0 0 rgba(255, 77, 0, 0.3); }
+  50% { box-shadow: 0 0 25px rgba(255, 180, 0, 0.6); }
+  100% { box-shadow: 0 0 0 rgba(255, 77, 0, 0.3); }
+}
+.footer-section {
+  background: linear-gradient(135deg, rgba(255, 90, 0, 0.3), #ffae00); 
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  text-align: center;
+  padding: 40px 15px 25px;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+}
+
+.join-btn {
+  display: inline-block;
+  background-color: #25D366;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.join-btn i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.join-btn:hover {
+  background-color: #1ebd5d;
+  transform: scale(1.05);
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 25px 0;
+}
+
+.icon {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid #000;
+  border-radius: 12px;
+  padding: 12px 15px;
+  font-size: 1.3rem;
+  color: #000;
+  transition: 0.3s;
+}
+
+.icon:hover {
+  background: #fff;
+  color: #32d657;
+  transform: scale(1.1);
+}
+.rights, .brand, .powered {
+  margin: 5px 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.powered {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.powered a {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.powered a:hover {
+  color: white;
+  text-decoration: underline;
+}
+@media (max-width: 480px) {
+  .join-btn {
+    width: 100%;
+    max-width: 320px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+</style>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/a2e0e6ad5a.js" crossorigin="anonymous"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const image = document.querySelector(".why-image");
+  const cards = document.querySelectorAll(".why-card");
+
+  function scrollAnimations() {
+    const trigger = window.innerHeight * 0.8;
+
+
+    if (image.getBoundingClientRect().top < trigger) {
+      image.classList.add("show-image");
+    } else {
+      image.classList.remove("show-image");
+    }
+    cards.forEach((card) => {
+      const cardTop = card.getBoundingClientRect().top;
+      if (cardTop < trigger) {
+        card.classList.add("show-card");
+      } else {
+        card.classList.remove("show-card");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", scrollAnimations);
+  scrollAnimations();
+});
+</script>
+
+<!-- Footer Section -->
+<section class="footer-section">
+  <a href="https://chat.whatsapp.com/DbqH4O8Qo691HT8nyFDchz?mode=wwt" target="_blank" class="join-btn">
+    <i class="fa-brands fa-whatsapp"></i> Join our WhatsApp Community
+  </a>
+
+  <div class="social-icons">
+    <a href="https://chat.whatsapp.com/DbqH4O8Qo691HT8nyFDchz?mode=wwt" class="icon"><i class="fa-brands fa-whatsapp"></i></a>
+    <a href="https://chat.whatsapp.com/DbqH4O8Qo691HT8nyFDchz?mode=wwt" class="icon"><i class="fa-brands fa-telegram"></i></a>
+    <a href="https://chat.whatsapp.com/DbqH4O8Qo691HT8nyFDchz?mode=wwt" class="icon"><i class="fa-brands fa-tiktok"></i></a>
+  </div>
+
+  <p class="rights">All rights reserved</p>
+  <p class="brand">@fortunex2025</p>
+
+  <p class="powered">
+    Powered by 
+    <a href=" https://wa.me/2347032154531?text=Hi+RaphXsoln" target="_blank">RaphXsoln</a>
+  </p>
+</section>
+
+
+  <!-- WhatsApp Chat Icon -->
+  <a href="https://chat.whatsapp.com/DbqH4O8Qo691HT8nyFDchz?mode=wwt" target="_blank" class="chat-icon">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  
+  
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      item.querySelector('.faq-question').addEventListener('click', () => {
+        faqItems.forEach(i => {
+          if (i !== item) i.classList.remove('active');
+        });
+        item.classList.toggle('active');
+      });
+    });
+
+    const images = [
+      "fortunex1.jpg",
+      "fortunex2.jpg",
+      "fortunex3.jpg",
+      "fortunex4.jpg",
+      "fortunex5.jpg",
+      "fortunex6.jpg",
+      "fortunex7.jpg",
+      "fortunex8.jpg",
+      "fortunex9.jpg"
+    ];
+
+    let index = 0;
+    const imgElement = document.getElementById("promoImage");
+
+    setInterval(() => {
+      index = (index + 1) % images.length;
+      imgElement.src = images[index];
+    }, 6000);
+    </script>
+    
+    <script>
+    const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach(item => {
+    const btn = item.querySelector(".faq-question");
+    btn.addEventListener("click", () => {
+      faqItems.forEach(i => i.classList.remove("active"));
+      item.classList.toggle("active");
+    });
+  });
+  </script>
+</body>
+</html>
